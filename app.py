@@ -9,8 +9,8 @@ st.set_page_config(
     layout="wide"
 )
 
-ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+ROOT = Path(__file__).resolve().parent
+DATA = ROOT
 
 st.title("🚦 Road Accident Intelligence & Risk Analysis")
 st.write("Explore accident patterns, risk levels, and road safety data.")
@@ -83,7 +83,7 @@ st.divider()
 
 st.subheader("🗺️ Accident Hotspot Map")
 
-map_file = ROOT / "outputs" / "accident_hotspot_map.html"
+map_file = ROOT / "accident_hotspot_map.html"
 
 if map_file.exists():
     with open(map_file, "r", encoding="utf-8") as f:
